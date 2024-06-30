@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>인풋 요소 공통(대부분) 속성</h1>
+    <form action="#">
+        <label for="valIp">value</label><br>
+        <input 
+            type="text"
+            id="valIp"
+            value="지정됨"
+        >
+        <br><br>
+        <label for="afIp">autofocus</label><br>
+        <input 
+            type="text"
+            id="afIp"
+            placeholder="자동 포커스됨"
+            autofocus
+        >
+        <br><br>
+        <label for="roIp">readonly</label> <br>
+        <input 
+            type="text"
+            id="roIp"
+            value="읽기만 가능, 전송됨"
+            readonly
+        >
+        <br><br>
+        <label for="daIp">disabled</label><br>
+        <input 
+            type="text"
+            id="daIp"
+            placeholder="입력 불가, 전송 안 됨"
+            disabled
+        >
+        <br><br>
+        <label for="rqIp">required</label><br>
+        <input 
+            type="text"
+            id="rqIp"
+            placeholder="필수 입력!"
+            required
+        >
+        <br><br>
+        <input 
+            type="radio"
+            name="fruit"
+            id="f_apple"
+            value="apple"
+            checked
+        >
+        <label for="f_apple">Apple</label>
+        <input 
+            type="radio"
+            name="fruit"
+            id="f_grape"
+            value="grape"
+            checked
+        >
+        <label for="f_grape">Grape</label>
+        <input 
+            type="radio"
+            name="fruit"
+            id="f_orange"
+            value="orange"
+            disabled
+        >
+        <label for="f_orange">Orange(품절)</label>
+        <br>
+        <br><br>
+        <button type="submit">제출</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Tag using option</h1>
+    <h2>select, option tag</h2>
+    <label for="lang">language</label><br>
+    <select id="lang" multiple>
+        <!-- mutiple방식은 잘 사용 안 된 -->
+        <option value="">--Select language--</option>
+        <option value="html" >HTML</option>
+        <option value="css">CSS</option>
+        <option value="js">Javascript</option>
+        <option value="ts">Typescript</option>
+    </select>
+    <br><br>
+    <h2>optgroup tag</h2>
+    <label for="shopping">list of shopping</label><br>
+    <select id="shopping">
+        <optgroup label="fruit">
+            <option value="f_apl">apple</option>
+            <option value="f_grp">grape</option>
+            <option value="f_org">orange</option>
+        </optgroup>
+        <optgroup label="vegetable">
+            <option value="v_crt">carrot</option>
+            <option value="v_tmt">tomato</option>
+            <option value="v_ept">eggplant</option>
+        </optgroup>
+        <optgroup label="meat">
+            <option value="m_bef">beef</option>
+            <option value="m_prk">pork</option>
+            <option value="m_ckn">chicken</option>
+        </optgroup>
+    </select>
+    <br><br>
+    <h2>datalist tag</h2>
+    <label for="job">Current job</label><br>
+    <input id="job" list="jobs">
+    <datalist id="jobs">
+        <option value="student">
+        <option value="designer">
+        <option value="publisher">
+        <option value="developer">
+    </datalist>
+</body>
+</html>
