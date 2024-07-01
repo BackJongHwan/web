@@ -1,0 +1,40 @@
+.outer li{
+    color: olivedrab;
+}
+
+.outer > li{
+    color: dodgerblue;
+}
+
+.outer > li li{
+    text-decoration: underline;
+}
+
+.starter ~li{
+    color: aqua;
+}
+.starter + li{
+    font-weight: bold;
+}
+
+ol li:first-child, ol li:last-child{
+    color:yellowgreen;
+}
+
+.outer > li:not(:last-child){
+    text-decoration: line-through;
+}
+
+ul:not(.outer) li{
+    font-weight: bold;
+}
+
+ol li:nth-child(3n + 1){
+    font-weight: bold;
+    color: deeppink;
+}
+
+li:hover{
+    font-weight: bold;
+    color: blue;
+}
