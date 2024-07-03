@@ -1,0 +1,8 @@
+div{
+    width:200px; height: 200px;
+    background: 
+        linear-gradient(217deg, red, blue),
+        linear-gradient(127deg, lime, red),
+        linear-gradient(336deg, blue, black)
+    ;
+}
