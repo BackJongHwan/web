@@ -15,13 +15,13 @@
         </colgroup>
         <thead>
             <tr>
-                <th scope="col">Sunday</th>
-                <th scope="col">Monday</th>
-                <th scope="col">Tuesday</th>
-                <th scope="col">Wedenseday</th>
-                <th scope="col">Thursday</th>
-                <th scope="col">Friday</th>
-                <th scope="col">Saturday</th>
+                <th scope="col">일</th>
+                <th scope="col">월</th>
+                <th scope="col">화</th>
+                <th scope="col">수</th>
+                <th scope="col">목</th>
+                <th scope="col">금</th>
+                <th scope="col">토</th>
             </tr>
         </thead>
         <tbody>
@@ -90,5 +90,16 @@
             </tr>
         </tbody>
     </table>
+    <script>
+        // JavaScript to highlight today's date
+        const today = new Date();
+        const day = today.getDate();
+        const cells = document.querySelectorAll('td');
+        cells.forEach(cell => {
+            if (cell.textContent == day) {
+                cell.classList.add('today');
+            }
+        });
+    </script>
 </body>
 </html>
