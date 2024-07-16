@@ -1,7 +1,7 @@
 p{
-    text-align: left;
-    letter-spacing: 0.001em;
-    word-spacing: 2px;
-    line-height: 1.2em;
-    text-indent: 10em;
+    text-align: justify;
+    letter-spacing: 0.1em;
+    word-spacing: -0.3em;
+    line-height: 1.5em;
+    text-indent: 6em;
 }

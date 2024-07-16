@@ -1,29 +1,40 @@
+/*
+uter class 안에있는 모든 li 
+*/
 .outer li{
     color: olivedrab;
 }
 
+/* outer class 첫번째 자식이 li인것만 */
 .outer > li{
     color: dodgerblue;
 }
 
+/* outer class에서 첫번째 자식이 li인 것의 li */
 .outer > li li{
     text-decoration: underline;
 }
 
-.starter ~li{
+/*starter class next li*/
+/* ~은 그 다음부터 모두 */
+/* .starter ~li{
     color: aqua;
-}
-.starter + li{
+} */
+/* +은 그 다음 것만 */
+/* .starter + li{
     font-weight: bold;
-}
+} */
 
+
+/* 딱봐도 그냥 ol의 첫번째 li, 마지막 li만 */
 ol li:first-child, ol li:last-child{
     color:yellowgreen;
 }
 
-.outer > li:not(:last-child){
-    text-decoration: line-through;
-}
+/* outer class에서 마지막 자시ㄱ만 빼고 */
+/* .outer > li:not(:last-child){
+    text-decoration: line-through; 
+} */
 
 ul:not(.outer) li{
     font-weight: bold;

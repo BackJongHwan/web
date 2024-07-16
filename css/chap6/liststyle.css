@@ -5,6 +5,12 @@ ul{
 ul > li:first-child{
     list-style: '-----';
 }
+ol > li:last-child{
+    list-style: url(../../images/coding.png);
+}
 ol{
     list-style: lower-alpha;
 }
+/* ol > li:last-child{
+    list-style: upper-alpha;
+} */
