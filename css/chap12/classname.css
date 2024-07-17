@@ -1,0 +1,15 @@
+span[class*="item"]{
+    text-decoration: underline;
+}
+
+span[class^="fruit"]{
+    color: tomato;
+}
+
+span[class^="vege"]{
+    color: olivedrab;
+}
+
+span[class$="-1"]{
+    font-weight: bold;
+}

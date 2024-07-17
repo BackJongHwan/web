@@ -1,0 +1,4 @@
+input:required::placeholder{
+    color: darkred;
+    background-color: yellow;
+}

@@ -1,0 +1,4 @@
+input[disabled]+label{
+    color:lightgray;
+    text-decoration: line-through;
+}

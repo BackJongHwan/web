@@ -1,0 +1,12 @@
+[class*="focus"]:focus{
+    outline: 2px solid deeppink;
+}
+
+.tab-focus:focus,
+.no-focus:focus{
+    outline: none;
+}
+
+[class *="tab-focus"]:focus-visible{
+    outline: 2px solid dodgerblue;
+}

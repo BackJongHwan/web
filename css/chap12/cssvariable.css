@@ -1,0 +1,23 @@
+@import url(./common.css);
+
+body{
+    margin: 0;
+    padding: 24px;
+}
+
+.not-good{
+    text-decoration: var(--not-good);
+}
+
+.wrong{
+    text-decoration: var(--wrong);
+}
+
+
+u{
+    background-color: var(--warn, lightblue);
+}
+
+i{
+    font-size:var(--font-xx-large);
+}

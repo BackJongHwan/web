@@ -1,0 +1,25 @@
+body{font-size: 1.2em;}
+div{margin-bottom: 1em;}
+div *{margin-right: 8px;}
+b{color: dodgerblue;}
+i{color: orangered;}
+
+/* :first-of-type{
+    text-decoration: overline;
+}
+
+:last-of-type{
+    text-decoration: line-through;
+} */
+
+b:nth-of-type(2){
+    text-decoration: underline;
+}
+
+div :only-of-type{
+    text-decoration: overline line-through underline;
+}
+
+div :only-child{
+    text-decoration: wavy underline tomato;
+}

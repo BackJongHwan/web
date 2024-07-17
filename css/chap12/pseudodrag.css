@@ -1,0 +1,8 @@
+.orange::selection{
+    background-color: orange;
+}
+
+.dark::selection{
+    color: lightgreen;
+    background-color: #222;
+}

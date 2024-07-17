@@ -1,8 +1,8 @@
 div{
     padding: 24px;
     background-color: skyblue;
-    cursor:n-resize;
+    cursor: auto;
     opacity:  1;
-    visibility: visible;
+    visibility: visible ;
     display: inline-block;
 }

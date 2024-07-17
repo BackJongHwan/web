@@ -1,0 +1,15 @@
+input[type="text"]:focus{
+    outline: 2px solid dodgerblue;
+}
+
+input:required{
+    border-color: orangered;
+}
+
+input[type="email"]:valid{
+    border-color: green;
+}
+
+input[type="email"]:not(:valid){
+    border-color: purple;
+}

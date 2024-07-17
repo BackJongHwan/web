@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent{
+            font-weight: bold;
+            color: slateblue;
+        }
+        .parent >div{color: olivedrab;}
+        .parent >:last-child{color: inherit;}
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <span class="class-label">.parent</span> 부모
+        <div>자식1</div>
+        <div>자식2</div>
+        <div>자식3</div>
+    </div>
+</body>
+</html>
