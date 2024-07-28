@@ -173,9 +173,11 @@ console.log(true || 'ive');
 console.log(false || 'ive');
 console.log(false && 'ive');
 console.log(true && 'ive');
+console.log('----------');
 
 console.log(true && true && 'ive');
 console.log(true && false && 'ive');
+console.log('----------');
 
 /**
  * 지수 연산자
@@ -185,7 +187,17 @@ console.log( 10** 4);
 /**
  * null 연산자
  */
-let what;
-console.log(what);
-what = what ? 'codefactory';
-console.log(what);
+let name;
+console.log(name);
+
+name = name ?? 'codefactroy';
+console.log(name);
+
+name = name ?? 'ive';
+console.log(name);
+
+console.log('----------');
+
+let name2;
+name2 ??= 'codefactory';
+console.log(name2);
