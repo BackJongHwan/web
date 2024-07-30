@@ -16,8 +16,8 @@ console.log(10 % 10);
 console.log(10 % 3);
 
 console.log('--------------');
-
 console.log(10 *(10 + 10));
+
 /**
  * 증가와 감소
  */
@@ -68,7 +68,7 @@ console.log(typeof +sample);
 
 sample = '99';
 console.log(-sample);
-console.log(typeof +sample);
+console.log(typeof -sample);
 
 /**
  * Assignment operator
@@ -182,8 +182,8 @@ console.log('----------');
 /**
  * 지수 연산자
  */
-console.log( 2** 2);
-console.log( 10** 4);
+console.log(2** 2);
+console.log(10** 4);
 /**
  * null 연산자
  */
@@ -199,5 +199,5 @@ console.log(name);
 console.log('----------');
 
 let name2;
-name2 ??= 'codefactory';
+// name2 ??= '코드팩토리';
 console.log(name2);

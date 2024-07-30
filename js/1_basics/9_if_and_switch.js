@@ -21,7 +21,7 @@ if(number % 2 === 0){
     console.log('2, 3, 4, 5');
 }
 
-const englishDay = 'monay';
+const englishDay = 'monday';
 
 let koreanDay;
 

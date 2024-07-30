@@ -59,9 +59,10 @@ const wonYoung = {
 }
 
 console.log(wonYoung);
-
+//1)에 해당하는 내용
 // wonYoung = {};
 
+//2)에 해당하는 내용
 wonYoung['group'] = 'codefactroy';
 console.log(wonYoung);
 

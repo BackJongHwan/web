@@ -24,7 +24,7 @@ console.log(ive);
 
 const newJeans = '뉴진스';
 console.log(newJeans);
-// newJeans = '민지';
+// newJeans = '민지'; 안 되는거
 
 /**
  * 선언과 할당
@@ -35,7 +35,7 @@ console.log(newJeans);
 var name = '코트팩토리';
 console.log(name);
 
-let girlFriend;
+let girlFriend; //declare만하면 undefined로 정의됨
 console.log(girlFriend);
 girlFriend = 'no';
 console.log(girlFriend);

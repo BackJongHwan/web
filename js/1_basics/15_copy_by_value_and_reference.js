@@ -33,6 +33,7 @@ console.log(cloneObj);
 
 console.log(originalObj === cloneObj);
 console.log(original === clone);
+console.log('--------------');
 
 originalObj = {
     name : '최지호',
@@ -42,7 +43,7 @@ clonelObj = {
     name : '최지호',
     group : 'codefactory',
 }
-console.log(originalObj === cloneObj);
+console.log(`originalObj === cloneObj:  ${originalObj === cloneObj}`);
 console.log('---------------');
 const yuJin1 ={
     name:'안유진',
@@ -75,12 +76,14 @@ const yuJin5 = {
     ...yuJin3,
 };
 console.log(yuJin5);
-
+//순서가 중요함
+//name이 앞에 있어서 yuJin3로 덮어짐
 const yuJin6 = {
     name : 'codefactory',
     ...yuJin3,
 };
 console.log(yuJin6);
+//name이 뒤에 있어서 codefactory로 대체됨
 const yuJin7 = {
     ...yuJin3,
     name : 'codefactory',

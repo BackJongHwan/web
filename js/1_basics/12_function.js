@@ -41,6 +41,7 @@ function multiply(x, y){
 
 multiply(3, 2);
 
+//default
 function multiply(x, y = 10){
     console.log(x * y);
 }
@@ -101,9 +102,8 @@ const multiplyThree = function(x, y, z){
 console.log('-------------------');
 console.log(multiplyThree(4, 5, 6));
 
-
 const multiplyAll = function(...argument){
-    return Object.values(arguments).reduce((a, b) => a * b, 1);
+    return Object.values(arguments).reduce((p, n) => p * n, 1);
 }
 
 console.log(multiplyAll(3, 4, 5, 6, 7, 8, 6, 7, 8));
@@ -111,7 +111,6 @@ console.log(multiplyAll(3, 4, 5, 6, 7, 8, 6, 7, 8));
 (function(x, y){
     console.log(x * y);
 })(2, 3)
-
 
 console.log(typeof multiply);
 console.log(multiply instanceof Object);
