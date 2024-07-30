@@ -12,6 +12,7 @@ function IdolModel(name, year){
     this.dance = function(){
         return `${this.name}이 춤을 춥니다.`;
     }
+    // return {};
 }
 //new가 꼭 필요함
 const yuJin = new IdolModel('안유진', 2003);

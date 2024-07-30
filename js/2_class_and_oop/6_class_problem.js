@@ -112,18 +112,12 @@ class Idol{
 }
 
 class MaleIdol extends Idol{
-    // constructor(){
-    //     super();
-    // }
     sing(){
         return `${this.name}이 노래를 합니다`;
     }
 }
 
 class FemaleIdol extends Idol{
-    // constructor(){
-    //     super();
-    // }
     dance(){
         return `${this.name}이 춤을 춥니다.`;
     }
@@ -135,6 +129,7 @@ const cIveMembers = iveMembers.map(
     (x) => new FemaleIdol(x['name'], x['year']),
 )
 console.log(cIveMembers);
+
 const cBtsMembers = btsMembers.map(
     (x) => new FemaleIdol(x['name'], x['year']),
 )

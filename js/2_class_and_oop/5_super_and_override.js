@@ -18,6 +18,8 @@ class FemaleIdolModel extends IdolModel{
     //노래 /춤
     part;
     constructor(name, year, part){
+        // this.name =name;
+        // this.year = year;
         super(name, year);
         this.part = part;
     }

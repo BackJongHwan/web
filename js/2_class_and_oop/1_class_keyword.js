@@ -28,12 +28,14 @@ const liz = new IdolModel('리즈', 2004);
 console.log(liz);
 const eseo = new IdolModel('이서', 2007);
 console.log(eseo);
-
+console.log('-----------------------');
 console.log(yuJin.name);
 console.log(yuJin.year);
+console.log('-----------------------');
 
 console.log(yuJin.sayName());
 console.log(wonYoung.sayName());
+console.log('-----------------------');
 
 console.log(typeof IdolModel);
 console.log(typeof yuJin);

@@ -1,5 +1,7 @@
 /**
  * Static keyword
+ * class 자체의 property
+ * not instance
  */
 
 
@@ -17,8 +19,9 @@
 // }
 
 // const yuJin = new IdolModel('안유진', 2003);
+// const wonYoung = new IdolModel('장원영', 2004);
 // console.log(yuJin);
-
+// console.log(wonYoung);
 // console.log(IdolModel.groupName);
 // console.log(IdolModel.returnGroupName());
 

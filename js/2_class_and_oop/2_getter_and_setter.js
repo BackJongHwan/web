@@ -12,10 +12,12 @@ class IdolModel{
     /**
      * 1) 데이터를 가공해서 새로운 데이터를 반환
      * 2) private한 값을 반환
+     * 3) set 잘 사용 안 함
      */
     get nameAndYear(){
         return `${this.name}-${this.year}`;
     }
+
     set setName(name){
         this.name = name;
     }
@@ -24,7 +26,8 @@ class IdolModel{
 const yuJin = new IdolModel('안유진', 2003);
 console.log(yuJin);
 console.log(yuJin.nameAndYear);
-yuJin.setName = '장원영';
+yuJin.name = '장원영';
+// yuJin.setName = '장원영';
 console.log(yuJin);
 
 class IdolModel2{

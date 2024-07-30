@@ -6,6 +6,7 @@ const testObj = {};
 // __proto__ 모든 객체에 존재하는 property
 // 부모 class에 해당되는 값이다.
 console.log(testObj.__proto__);
+console.log('----------');
 
 function IdolModel(name, year){
     this.name = name;
@@ -13,6 +14,7 @@ function IdolModel(name, year){
 }
 
 console.log(IdolModel.prototype);
+console.log('----------');
 
 // console.dir(IdolModel.prototype, {
 //     showHidden: true,
