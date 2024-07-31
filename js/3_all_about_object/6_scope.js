@@ -9,6 +9,7 @@ function levelOne(){
 }
 
 // levelOne();
+// console.log('---------------');
 
 function levelOne(){
     var numberOne = 40;
@@ -16,8 +17,9 @@ function levelOne(){
 }
 
 // levelOne();
+// console.log('---------------');
 
-console.log(numberOne);
+// console.log(numberOne);
 // console.log('---------------');
 function levelOne(){
     var numberOne = 40;
@@ -59,6 +61,7 @@ function functionTwo(){
 functionOne();
 
 var i = 999;
+//for문 안에 var로 실행하면 global이 바뀜
 for (var i = 0; i < 10; i++)
 {
     console.log(i);
@@ -68,6 +71,7 @@ console.log(`i in global scope: ${i}`);
 
 i = 999;
 //block level scope
+//let은 아니여
 for(let i = 0; i < 10; i++)
 {
     console.log(i);

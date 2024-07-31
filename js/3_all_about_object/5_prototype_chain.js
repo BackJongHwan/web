@@ -2,7 +2,6 @@
  * Prototype
  */
 const testObj = {};
-
 // __proto__ 모든 객체에 존재하는 property
 // 부모 class에 해당되는 값이다.
 console.log(testObj.__proto__);
@@ -16,31 +15,36 @@ function IdolModel(name, year){
 console.log(IdolModel.prototype);
 console.log('----------');
 
-// console.dir(IdolModel.prototype, {
-//     showHidden: true,
-// });
+console.dir(IdolModel.prototype, {
+    showHidden: true,
+});
 
 //circular reference
 console.log(IdolModel.prototype.constructor === IdolModel);
 console.log(IdolModel.prototype.constructor.prototype === IdolModel.prototype);
+console.log('----------');
 
 const yuJin = new IdolModel('안유진', 2003);
 console.log(yuJin.__proto__);
 console.log(yuJin.__proto__ === IdolModel.prototype);
+console.log('----------');
 
 console.log(testObj.__proto__ === Object.prototype);
+console.log('----------');
 
 console.log(IdolModel.__proto__ === Function.prototype);
 console.log(Function.prototype.__proto__ === Object.prototype);
+// console.dir(Object.prototype, {
+//     showHidden: true,
+// });
+
 console.log(IdolModel.prototype.__proto__ === Object.prototype);
+console.log('----------');
 
 console.log(yuJin.toString());
 console.log(Object.prototype.toString());
-
-
-
-
 console.log('----------------');
+
 function IdolModel2(name, year){
     this.name = name;
     this.year = year;
@@ -145,6 +149,8 @@ console.log(Object.getPrototypeOf(ray) === FemaleIdolModel.prototype);
 // console.log(ray.sayHello());
 Object.setPrototypeOf(ray, IdolModel.prototype);
 console.log(ray.sayHello());
+
+// console.log(ray.dance()); //이것도 되네..
 console.log(ray.constructor === FemaleIdolModel);
 console.log(ray.constructor === IdolModel);
 console.log(gaEul.constructor === IdolModel);
@@ -152,7 +158,10 @@ console.log(Object.getPrototypeOf(ray) === FemaleIdolModel.prototype);
 console.log(FemaleIdolModel.prototype === IdolModel.prototype);
 
 FemaleIdolModel.prototype = IdolModel.prototype;
+
 const eSeo = new FemaleIdolModel('이서', 2003);
 console.log(Object.getPrototypeOf(eSeo) === FemaleIdolModel.prototype);
 console.log(FemaleIdolModel.prototype === IdolModel.prototype);
 console.log(Object.getPrototypeOf(eSeo) === IdolModel.prototype);
+console.log(eSeo.sayHello());
+console.log(eSeo.dance());

@@ -75,7 +75,7 @@ console.log(runner3());
 console.log(runner3());
 
 /**
- * 3) 정보 은닉
+ *  3) 정보 은닉
  */
 function Idol(name, year){
     this.name = name;

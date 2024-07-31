@@ -1,11 +1,8 @@
 /**
  * Async theory
  */
-
 // function longWork(){
 //     const now = new Date();
-
-
 //     /**
 //      * milliseconds since epoch
 //      * 1970년도 1월 1일부터 지금 코드가 실행되는 순간까지의 시간을
@@ -35,4 +32,3 @@ function longWork(){
 console.log("Hello");
 longWork();
 console.log('World');
-
