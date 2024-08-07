@@ -1,0 +1,31 @@
+{
+  "name": "npmtest-1231231",
+  "version": "0.0.1",
+  "description": "hello package.json",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BackJongHwan/web.git"
+  },
+  "author": "bjh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BackJongHwan/web/issues"
+  },
+  "homepage": "https://github.com/BackJongHwan/web#readme",
+  "dependencies": {
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.6",
+    "express": "^4.19.2",
+    "express-session": "^1.18.0",
+    "morgan": "^1.10.0",
+    "pug": "^3.0.3",
+    "rimraf": "^3.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}

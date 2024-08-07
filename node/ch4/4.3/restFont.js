@@ -31,7 +31,7 @@ function getUser(){//로딩 시 사용자가 가져오는 함수
                 });
                 var remove = document.createElement('button');
                 remove.textContent ='삭제';
-                removeEventListener('click', function(){
+                remove.addEventListener('click', function(){
                     //삭제버튼클릭시
                     var xhr = new XMLHttpRequest();
                     xhr.onload = function(){
