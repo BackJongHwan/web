@@ -1,0 +1,28 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  button(class=title, type='submit') 전송
+  input(placeholder= title + ' 연습')
+  - var node = 'Node.js'
+  - var js = 'Javascript'
+  p #{node}와 #{js}
+  p= '<strong>escape</strong>'
+  p!= '<strong>no escape</strong>'
+  ul
+    each fruit,index in ['apple', 'poat', 'orange', 'banana', 'peach']
+      li= (index + 1) + 'th ' + fruit
+      case fruit
+        when 'apple'
+          p apple
+        when 'banana'
+          p banana
+        when 'orange'
+          p orange
+        default
+          p not apple, banana, orange
+  if isLoggedIn
+    div login
+  else
+    div need login
