@@ -14,15 +14,22 @@ var app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
-app.use(function(req, res, next){
-  console.log(req.url, '저도 미들웨어입니다.');
-  next();
-});
+
+// app.use((req, res, next)=>{
+//   console.log(req.url, 'i\'m middle ware too');
+//   next();
+// });
+//log
 app.use(logger('dev'));
+
 app.use(express.static(path.join(__dirname, 'public')));
+
+//body compreheands
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+
 app.use(cookieParser('secret code'));
+
 app.use(session({
   resave: false,
   saveUninitialized: false,
@@ -32,9 +39,12 @@ app.use(session({
     secure: false,
   },
 }));
-app.use(flash());
+app.use(flash);
+
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

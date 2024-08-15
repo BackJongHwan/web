@@ -1,0 +1,20 @@
+{
+  "name": "npmtest",
+  "version": "0.0.1",
+  "description": "delete my pakage.json ㅠㅠ",
+  "main": "index.js",
+  "scripts": {
+    "test": "testetwtsfd"
+  },
+  "author": "back",
+  "license": "ISC",
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "express": "^4.19.2",
+    "express-session": "^1.18.0",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}
