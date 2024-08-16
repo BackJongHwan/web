@@ -15,10 +15,10 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
-// app.use((req, res, next)=>{
-//   console.log(req.url, 'i\'m middle ware too');
-//   next();
-// });
+app.use((req, res, next)=>{
+  console.log(req.url, 'i\'m middle ware too');
+  next();
+});
 //log
 app.use(logger('dev'));
 
@@ -39,8 +39,7 @@ app.use(session({
     secure: false,
   },
 }));
-app.use(flash);
-
+app.use(flash());
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);

@@ -1,5 +1,5 @@
-module.exports = (sequelize,  DataTypes) =>{
-    return sequelize.define('user', {
+module.exports = (sequelize, DataTypes) =>{
+    return sequelize.define('user',{
         name:{
             type: DataTypes.STRING(20),
             allowNull: false,
@@ -14,11 +14,11 @@ module.exports = (sequelize,  DataTypes) =>{
             allowNull: false,
         },
         comment:{
-            type: DataTypes.TEXT,
+            type:DataTypes.TEXT,
             allowNull: true,
         },
         created_at:{
-            type: DataTypes.DATE,
+            type:DataTypes.DATE,
             allowNull: false,
             defaultValue: DataTypes.NOW,
         },
