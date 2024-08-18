@@ -3,13 +3,14 @@ const multer = require('multer');
 const path = require('path');
 const fs = require('fs');
 
-const {Post, Hashtag, User} = require('../models');
+const{Post, Hashtag, User} = require('../models');
 const {isLoggedIn} = require('./middlewares');
+const { throwDeprecation } = require('process');
 
 const router = express.Router();
-fs.readdir('uploads', (error)=>{
+fs.readdir('uploads',(error)=>{
     if(error){
-        console.error('uploads폴더가 없어 uploads 폴더를 생성합니다');
+        console.error('uploads 폴더가 없어 uploads 폴더를 생성합니다');
         fs.mkdirSync('uploads');
     }
 });
@@ -17,9 +18,9 @@ fs.readdir('uploads', (error)=>{
 const upload = multer({
     storage: multer.diskStorage({
         destination(req, file, cb){
-            cb(null, 'uploads/');
+            cb(null,'uploads/');
         },
-        filename(req, file, cb){
+        filename(req, file,cb){
             const ext = path.extname(file.originalname);
             cb(null, path.basename(file.originalname, ext) + Date.now() + ext);
         },
@@ -40,7 +41,7 @@ router.post('/', isLoggedIn, upload2.none(), async(req, res, next)=>{
             img: req.body.url,
             userId: req.user.id,
         });
-        const hashtags = req.body.content.match(/#[^\s#]/g);
+        const hashtags = req.body.content.match(/#[^\s#]*/g);
         if(hashtags){
             const result = await Promise.all(hashtags.map(tag => Hashtag.findOrCreate({
                 where: {title: tag.slice(1).toLowerCase()},
@@ -60,10 +61,10 @@ router.get('/hashtag', async(req, res, next)=>{
         return res.redirect('/');
     }
     try{
-        const hashtag = await Hashtag.fieldOne({where: {title: query}});
+        const hashtag = await Hashtag.findOne({where: {title: query}});
         let posts = [];
         if(hashtag){
-            posts = await hashtag.getPosts({include: [{model: User}]});
+            posts = await hashtag.getPosts({include: [{model : User}]});
         }
         return res.render('main',{
             title: `${query} | NodeBird`,
@@ -75,5 +76,4 @@ router.get('/hashtag', async(req, res, next)=>{
         return next(err);
     }
 });
-
 module.exports = router;

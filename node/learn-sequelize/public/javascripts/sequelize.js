@@ -52,12 +52,15 @@ function getComment(id){
             tbody.innerHTML = '';
             comments.map(function(comment){
                 var row = document.createElement('tr');
+                //id
                 var td = document.createElement('td');
                 td.textContent = comment.id;
                 row.appendChild(td);
+                //name
                 var td = document.createElement('td');
                 td.textContent = comment.user.name;
                 row.appendChild(td);
+                //comment
                 var td = document.createElement('td');
                 td.textContent = comment.comment;
                 row.appendChild(td);
@@ -126,7 +129,7 @@ document.getElementById('user-form').addEventListener('submit', function(e){
     }
     var xhr = new XMLHttpRequest();
     xhr.onload = function(){
-        if(xhr.status === 200){
+        if(xhr.status === 201){
             console.log(xhr.responseText);
             getUser();
         }
@@ -155,7 +158,7 @@ document.getElementById('comment-form').addEventListener('submit', function(e){
     }
     var xhr = new XMLHttpRequest();
     xhr.onload = function(){
-        if(xhr.status === 200){
+        if(xhr.status === 201){
             console.log(xhr.responseText);
             getComment(id);
         }else{

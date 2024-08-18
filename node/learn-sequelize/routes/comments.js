@@ -92,7 +92,7 @@ router.post('/:id', async function(req, res, next){
 router.patch('/:id', async function(req, res, next){
     try{
         const result = await Comment.update({comment: req.body.comment}, {where : {id: req.params.id}});
-        res.status(201).json(result);
+        res.json(result);
     }catch(err){
         console.error(err);
         next(err);
