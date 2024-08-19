@@ -1,11 +1,15 @@
 const express = require('express');
 const {isLoggedIn, isNotLoggedIn} = require('./middlewares');
-const {Post, User} = require('./models');
+const {Post, User} = require('../models');
 const router = express.Router();
 
 router.get('/profile',isLoggedIn, (req, res)=>{
     res.render('profile', {title: '내 정보 - NodeBird', user: req.user});
 });
+
+router.patch('/profile', isLoggedIn, (req, res)=>{
+    
+})
 
 router.get('/join',isNotLoggedIn, (req, res)=>{
     res.render('join', {
