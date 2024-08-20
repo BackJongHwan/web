@@ -1,4 +1,4 @@
-const jwt = reuqire('jsonwebtoken');
+const jwt = require('jsonwebtoken');
 
 exports.isLoggedIn = (req, res, next) =>{
     if(req.isAuthenticated()) {

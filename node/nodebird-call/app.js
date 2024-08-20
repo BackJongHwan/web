@@ -9,20 +9,20 @@ const indexRouter = require('./routes');
 
 const app = express();
 
-app.set('view', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 app.set('port', process.env.PORT || 8003);
 
 app.use(morgan('dev'));
 app.use(cookieParser(process.env.COOKIE_SECRET));
 app.use(session({
-    resave: false,
-    saveUninitialized: false,
-    secret: process.env.COOKIE_SECRET,
-    cookie:{
-        httpOnly: true,
-        secure: false,
-    },
+  resave: false,
+  saveUninitialized: false,
+  secret: process.env.COOKIE_SECRET,
+  cookie: {
+    httpOnly: true,
+    secure: false,
+  },
 }));
 
 app.use('/', indexRouter);

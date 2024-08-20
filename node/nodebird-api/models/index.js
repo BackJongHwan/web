@@ -1,4 +1,5 @@
 const Sequelize = require('sequelize');
+const { isDivisibleBy } = require('validator');
 const env = process.env.NODE_ENV || 'development';
 const config = require('../config/config')[env];
 const db = {};
